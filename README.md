@@ -1,11 +1,11 @@
-# Kira - AI-Powered Automotive Platform
+# Kiro - AI-Powered Automotive Platform
 
 A comprehensive automotive platform that combines Next.js frontend, NestJS API gateway, and multiple FastAPI ML services for OCR, RAG, valuation, and AI agent capabilities.
 
 ## Architecture
 
 ```
-/KIRA
+/Kiro
 │── /frontend              # Next.js app (dealer/customer dashboard, WebRTC UI)
 │── /gateway               # NestJS API gateway (auth, orchestration, DB)
 │── /ml-services           # FastAPI apps for OCR, RAG, valuation, agent
@@ -32,7 +32,7 @@ A comprehensive automotive platform that combines Next.js frontend, NestJS API g
 1. **Clone and setup**
    ```bash
    git clone <repository-url>
-   cd Kira
+   cd Kiro
    npm install
    ```
 
