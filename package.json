@@ -1,0 +1,35 @@
+{
+  "name": "kira",
+  "version": "1.0.0",
+  "description": "Kira - AI-powered automotive platform",
+  "private": true,
+  "scripts": {
+    "dev": "docker-compose up",
+    "build": "docker-compose build",
+    "down": "docker-compose down",
+    "lint": "npm run lint:frontend && npm run lint:gateway",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:gateway": "cd gateway && npm run lint",
+    "test": "npm run test:frontend && npm run test:gateway",
+    "test:frontend": "cd frontend && npm run test",
+    "test:gateway": "cd gateway && npm run test"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
